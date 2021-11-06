@@ -35,6 +35,7 @@ public class s_inf_pes extends soldado
     
     
     // Determina el daño extra favorable al soldado
+    @Override
     public int ataqueextra(String tipoS)
     {
         int ataquearecibir = 0;

@@ -32,5 +32,6 @@ public class s_inf_lig extends soldado
         return ataque;
     }
     
-   
+    @Override
+    public int ataqueextra(String tipoS){ return getAtaque(); }
 }

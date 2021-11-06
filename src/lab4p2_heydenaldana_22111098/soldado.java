@@ -70,5 +70,5 @@ public abstract class soldado
         this.vit = vit;
     }
     
-    abstract int ataqueextra(String tipoS);
+     public abstract int ataqueextra (String tipoS);
 }

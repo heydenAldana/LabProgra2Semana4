@@ -34,6 +34,7 @@ public class s_capitan extends soldado
     }
     
     // Determina el daño extra favorable al soldado
+    @Override
     public int ataqueextra(String tipoS)
     {
         int ataquearecibir = 0;
