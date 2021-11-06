@@ -14,13 +14,14 @@ public class s_inf_pes extends soldado
     // Atributos
     private String arma;
     private int ataque;
+    armas a;
     
     // Constrcutor
     public s_inf_pes (String nombre, int edad, int diasBatallando, String rango, int vit)
     {
         super(nombre, edad, diasBatallando, rango, vit);
-        this.arma = "BOMBA";
-        this.ataque = 150;
+        this.arma = a.BOMBA.toString();
+        this.ataque = a.BOMBA.getAtaque();
     }
 
     // get y set
@@ -32,8 +33,8 @@ public class s_inf_pes extends soldado
         return ataque;
     }
     
-    // chequea los bonos (ataque extra) y lo aplica al ataque actual
-    @Override
+    
+    // Determina el daño extra favorable al soldado
     public int ataqueextra(String tipoS)
     {
         int ataquearecibir = 0;

@@ -33,7 +33,7 @@ public class s_capitan extends soldado
         return ataque;
     }
     
-    
+    // Determina el daño extra favorable al soldado
     public int ataqueextra(String tipoS)
     {
         int ataquearecibir = 0;

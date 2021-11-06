@@ -14,13 +14,13 @@ public class s_inf_lig extends soldado
     // Atributos
     private String arma;
     private int ataque;
-    
+    armas a;
     // Constrcutor
     public s_inf_lig (String nombre, int edad, int diasBatallando, String rango, int vit)
     {
         super(nombre, edad, diasBatallando, rango, vit);
-        this.arma = "ARMA BLANCA";
-        this.ataque = 50;
+        this.arma = a.ARMAB.toString();
+        this.ataque = a.ARMAB.getAtaque();
     }
 
     // get y set
@@ -32,11 +32,5 @@ public class s_inf_lig extends soldado
         return ataque;
     }
     
-    // chequea los bonos (ataque extra) y lo aplica al ataque actual
-    @Override
-    public int ataqueextra(String tipoS)
-    {
-        int ataquearecibir = 0;
-        return ataquearecibir;
-    }
+   
 }

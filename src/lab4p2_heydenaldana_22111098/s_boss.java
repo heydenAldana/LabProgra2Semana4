@@ -26,7 +26,7 @@ public class s_boss extends soldado
 
     
     // obtiene el arma que usa (su daño)
-    private int tipoArma(String armat)
+    public int tipoArma(String armat)
     {
         try
         {
@@ -34,15 +34,31 @@ public class s_boss extends soldado
                 return 50;
             if(armat.equalsIgnoreCase(a.BOMBA.toString()))
                 return 150;
-            if(armat.equalsIgnoreCase("ESCOPETA"))
+            if(armat.equalsIgnoreCase(a.ESCOPETA.toString()))
                 return 140;
-            if(armat.equalsIgnoreCase("LANZALLAMAS"))
+            if(armat.equalsIgnoreCase(a.LANZALLAMAS.toString()))
                 return 110;
         } catch (Exception e) {
             System.out.println("---> LOS DATOS NO ESTAN DISPONIBLES.");
         }
         
         return -1;
+    }
+    
+    // Determina el daño extra favorable al soldado
+    @Override
+    public int ataqueextra(String tipoS)
+    {
+        int ataquearecibir = 0;
+        if(tipoS.equalsIgnoreCase("SARGENTO"))
+            ataquearecibir = ataque + (int)(ataque * 0.35);
+        if(tipoS.equalsIgnoreCase("CAPITAN"))
+            ataquearecibir = ataque + (int)(ataque * 0.30);
+        if(tipoS.equalsIgnoreCase("INFANTERIA PESADA"))
+            ataquearecibir = ataque + (int)(ataque * 0.40);
+        if(tipoS.equalsIgnoreCase("INFANTERIA LIGERA"))
+            ataquearecibir = ataque + (int)(ataque * 0.55);
+        return ataquearecibir;
     }
     
     public int getAtaque() {

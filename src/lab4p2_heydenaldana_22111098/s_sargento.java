@@ -14,13 +14,14 @@ public class s_sargento extends soldado
     // Atributos
     private String arma;
     private int ataque;
+    armas a;
     
     // Constrcutor
     public s_sargento (String nombre, int edad, int diasBatallando, String rango, int vit)
     {
         super(nombre, edad, diasBatallando, rango, vit);
-        this.arma = "ESCOPETA";
-        this.ataque = 140;
+        this.arma = a.ESCOPETA.toString();
+        this.ataque = a.ESCOPETA.getAtaque();
     }
 
     // get y set
@@ -32,7 +33,7 @@ public class s_sargento extends soldado
         return ataque;
     }
     
-    // chequea los bonos (ataque extra) y lo aplica al ataque actual
+    // Determina el daño extra favorable al soldado
     @Override
     public int ataqueextra(String tipoS)
     {
