@@ -346,4 +346,10 @@ public class escuadron
         }
         return null;
     }
+    
+    // Contar escuadrones
+    public int contarEscuadrones()
+    {
+        return esc.size();
+    }
 }

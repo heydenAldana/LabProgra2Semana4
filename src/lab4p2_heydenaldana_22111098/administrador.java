@@ -36,6 +36,11 @@ public class administrador
     {
         try
         {
+            if(esc.contarEscuadrones() < 3)
+            {
+                System.out.println("Asi no vas a jugar. Necesitas 2 escuadrones al menos");
+                return;
+            }
             nombreZona = esc.buscarZona(enumeracion_zona);
             System.out.println("---> ZONA ELEGIDA CON EXITO");
         } catch (Exception e) {
@@ -48,6 +53,11 @@ public class administrador
     {
         try
         {
+            if(soldier.size() < 3)
+            {
+                System.out.println("Asi no vas a jugar. Necesitas 3 soldados al menos");
+                return;
+            }
             // primero jugador 1 y luego jugador 2
             for (int i = 0; i < 2; i++) 
             {
